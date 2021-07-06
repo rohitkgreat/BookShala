@@ -37,36 +37,30 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: Text('Hi, there welcome to Bookshala'),
+            child: Text('Hi there, welcome to Bookshala'),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: ElevatedButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.of(context).pushNamed('/first');
+              },
               child: Text(
-                "Login Using Mobile Number",
+                "Login Using Mobile ",
                 style: TextStyle(fontSize: 20),
               ),
             ),
           ),
           Text('or'),
           Padding(
-            padding:
-                const EdgeInsets.only(top: 10, bottom: 30, left: 10, right: 10),
+            padding: const EdgeInsets.only(top: 10, bottom: 30),
             child: ElevatedButton(
-              onPressed: null,
-              child: Row(
-                children: [
-                  Text(
-                    "Login Using Google",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  SizedBox(
-                    height: 30,
-                    width: 100,
-                    child: Image.asset('assets/ggl.png'),
-                  ),
-                ],
+              onPressed: () {
+                Navigator.of(context).pushNamed('/first');
+              },
+              child: Text(
+                "Login Using Google",
+                style: TextStyle(fontSize: 20),
               ),
             ),
           ),
